@@ -22,7 +22,21 @@
 	
 */
 
-
+/*
+	/////////////////////
+	//	Design Thinking
+	/////////////////////
+	
+	Create a pipeline of 2 registers.
+	
+	Check if current input is equal to the last pipe reg.
+	If Yes, assert the palindrome_o, if no, let it be zero.
+	
+	Please note that the registers should be reset to X or
+	palindrome_o should be checked only after 2 cycles of 
+	reset. 
+	
+*/
 
 
 
