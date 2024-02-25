@@ -60,10 +60,8 @@ module palindrome3b (
 	
 	always @ (posedge clk or posedge reset) begin 
 		if (reset) begin 
-		//	pipe0 <= 'bx;
-		//	pipe1 <= 'bx;
-			pipe0 <= 'b0;
-		    pipe1 <= 'b0;
+			pipe0 <= 0;
+		    pipe1 <= 0;
 			res0  <= 1;
 			res1  <= 1;
 		end else begin 
