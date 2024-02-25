@@ -50,6 +50,28 @@ module palindrome3b (
   output  wire        palindrome_o
 );
 
-  // Write your logic here...
+	assign palindrome_o = ((!res1) && pipe1 == x_i) ? 1 : 0;
+	
+	// Write your logic here...
+	reg  pipe0;	
+	reg  pipe1;
+	reg  res0;
+	reg  res1;
+	
+	always @ (posedge clk or posedge reset) begin 
+		if (reset) begin 
+		//	pipe0 <= 'bx;
+		//	pipe1 <= 'bx;
+			pipe0 <= 'b0;
+		    pipe1 <= 'b0;
+			res0  <= 1;
+			res1  <= 1;
+		end else begin 
+			res0  <= reset;
+			res1  <= res0;
+			pipe0 <= x_i;
+			pipe1 <= pipe0;
+		end 
+	end 
 
 endmodule
